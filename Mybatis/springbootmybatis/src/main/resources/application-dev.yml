@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+#spring:
+#  datasource:
+#    username: root
+#    password: 990201
+#    url: jdbc:mysql://localhost:3306/springbootmybatis?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapping.xml
+  type-aliases-package: com.simple.springbootmybatis.pojo
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
+
+
+
+##多数据源
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 990201
+      url: jdbc:mysql://localhost:3306/springbootmybatis?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
